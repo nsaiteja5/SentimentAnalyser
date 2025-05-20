@@ -1,19 +1,24 @@
-# sentimentanalyser
+#SentimentAnalyser
+This is my first time working with a Transformer model.
+I experimented with the Transformer architecture described in the paper "Attention is All You Need" by Ashish Vaswani et al.
 
-this is the first time im working with a transformer model. 
-i tried to use the transformer approach written in paper "Attention is all you need" by ashish vaswani. 
+#Dataset
+I used the dair-ai/emotion dataset from Hugging Face, which contains:
 
-i used dataset dair-ai/emotion from hugging face. which has about
-16k training samples
-2k validation samples
-2k test samples
+~16,000 training samples
 
-# architecture
-as i said ive used the transformer block from that paper. as this is just classification problem, ig only encoder part works best. 
-i used only one transformer block for this. you can check out architecture in the code. 
+~2,000 validation samples
 
-# dataset up
-after getting dataset from huggingface, i got a bug when i fed that to model (even it was converted to numpy array) , so i had to use tensorflow data pipeline and it worked. also i used tokenizer from tensorflow. 
+~2,000 test samples
 
-# training
-you can check this in the code !
+#Architecture
+As this is a classification task, I only used the encoder part of the Transformer architecture.
+I implemented a single Transformer block based on the original paper. You can find the full architecture in the code.
+
+#Dataset Setup
+After loading the dataset from Hugging Face, I encountered a bug when feeding it into the model (even after converting it to a NumPy array).
+To resolve this, I used the TensorFlow data pipeline, and it worked smoothly.
+The tokenizer used is also from TensorFlow.
+
+Training
+You can find all the training details in the code! 🔧
